@@ -1,10 +1,10 @@
-import { AxiosInstance } from "axios";
+import axios, { AxiosInstance } from "axios";
 import { IApp } from "./types";
 
 export class AuthPointer {
   private axiosInstance: AxiosInstance;
   constructor() {
-    this.axiosInstance({
+    this.axiosInstance = axios.create({
       baseURL: "api",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export class AuthPointer {
         body
       );
       return response.data;
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error);
     }
   }
@@ -30,7 +30,7 @@ export class AuthPointer {
         },
       });
       return response.data;
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error);
     }
   }

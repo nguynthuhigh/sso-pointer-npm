@@ -1,6 +1,6 @@
 {
   "name": "sso-pointer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Single Sign-On (SSO)",
   "main": "lib/main.ts",
   "type": "lib/types.d.ts",
