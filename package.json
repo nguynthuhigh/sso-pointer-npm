@@ -1,0 +1,29 @@
+{
+  "name": "sso-pointer",
+  "version": "1.0.0",
+  "description": "Single Sign-On (SSO)",
+  "main": "lib/main.ts",
+  "type": "lib/types.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "test",
+    "build": "tsc"
+  },
+  "keywords": [
+    "sso",
+    "sso-pointer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguynthuhigh/sso-pointer-npm.git"
+  },
+  "homepage": "https://github.com/nguynthuhigh/sso-pointer-npm#readme",
+  "author": "nguynthuhigh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "typescript": "^5.6.2"
+  }
+}
