@@ -1,7 +1,10 @@
 import { IApp } from "./types";
-export declare class AuthPointer {
+export declare class PointerStrategy {
     private axiosInstance;
-    constructor();
-    getAccessToken(body: IApp): Promise<any>;
+    private clientId;
+    private clientSecret;
+    private callbackUrl;
+    constructor({ clientId, clientSecret, callbackUrl }: IApp);
+    getAccessToken(code: string): Promise<any>;
     getUser(accessToken: string): Promise<any>;
 }
