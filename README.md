@@ -2,9 +2,9 @@
   <a href="https://auth.pointer.io.vn/" target="blank"><img src="https://i.imgur.com/5cYzRrm.png" width="120" alt="Pointer Logo" /></a>
 </p>
 
-# OAuth Pointer Node.js Library
+# SSO Pointer Node.js Library
 
-**[OAuth Pointer Github](https://github.com/nguynthuhigh/sso-pointer-npm)**
+**[Pointer?](https://pointer.io.vn/)**
 
 # Installation
 
