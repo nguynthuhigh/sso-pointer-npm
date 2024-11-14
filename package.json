@@ -1,6 +1,6 @@
 {
-  "name": "oauth-pointer",
-  "version": "1.0.2",
+  "name": "sso-pointer",
+  "version": "1.0.7",
   "description": "Single Sign-On (SSO)",
   "main": "lib/index.js",
   "types": "lib/types.d.ts",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nguynthuhigh/oauth-pointer-npm.git"
+    "url": "git+https://github.com/nguynthuhigh/sso-pointer-npm.git"
   },
   "keywords": [
     "sso",
@@ -22,13 +22,15 @@
   "author": "nguynthuhigh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nguynthuhigh/oauth-pointer-npm/issues"
+    "url": "https://github.com/nguynthuhigh/sso-pointer-npm/issues"
   },
-  "homepage": "https://github.com/nguynthuhigh/oauth-pointer-npm#readme",
+  "homepage": "https://github.com/nguynthuhigh/sso-pointer-npm#readme",
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "axios": "^1.7.7"
+    "axios": "^1.7.7",
+    "jsonwebtoken": "^9.0.2"
   }
 }

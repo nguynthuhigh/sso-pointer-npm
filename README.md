@@ -4,9 +4,9 @@
 
 # OAuth Pointer Node.js Library
 
-**[OAuth Pointer Github](https://github.com/nguynthuhigh/oauth-pointer-npm)**
+**[OAuth Pointer Github](https://github.com/nguynthuhigh/sso-pointer-npm)**
 
-# Installing
+# Installation
 
 ```
 npm install oauth-pointer
@@ -14,35 +14,21 @@ npm install oauth-pointer
 yarn add oauth-pointer
 ```
 
-# Documentation
-
 # Usage
 
-> [!NOTE]
-> The package needs clientId, clientSecret to configure, which you can get at **[Pointer Apps](http://sso-pointer.vercel.app/)**
-
-```typescript
-import { PointerStrategy } from "oauth-pointer";
-
-const pointer = new PointerStrategy({
-  clientId: process.env.POINTER_CLIENT_ID,
-  clientSecret: process.env.POINTER_CLIENT_SECRET,
-  callbackUrl: process.env.POINTER_CALLBACK_URL,
-});
-const accessToken = await pointer.getAccessToken("code");
-console.log(accessToken);
-```
-
-or Javascript
-
 ```javascript
-const { PointerStrategy } = require("oauth-pointer");
+const { PointerStrategy } = require("sso-pointer");
+const pointer = new PointerStrategy(
+  process.env.POINTER_CLIENT_ID,
+  process.env.POINTER_CLIENT_SECRET
+);
 
-const pointer = new PointerStrategy({
-  clientId: process.env.POINTER_CLIENT_ID,
-  clientSecret: process.env.POINTER_CLIENT_SECRET,
-  callbackUrl: process.env.POINTER_CALLBACK_URL,
-});
-const accessToken = await pointer.getAccessToken("code");
-console.log(accessToken);
+const data = await pointer.getAccessToken(code);
+// {
+//   accessToken: 'eyJhbGciOiJSUz.......',
+//   user: { _id: '66f18f7c2c298da02e857d85', email: 'admin@pointer.com',image:'image.url.com',name:'Admin' }
+// }
+//Verify token
+const payload = await pointer.verifyAccessToken(accessToken);
+console.log(payload);
 ```
